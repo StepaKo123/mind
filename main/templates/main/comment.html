@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <title> Comment </title>
+</head>
+
+<body>
+<!--
+левая навигация
+--> 
+  <div class="sidenav nav-pills">
+    <a href = "main.html"> <img class = "nav-image" src = "images/books_apple.jpg" alt = "Книги"> </a>
+    <p class = "nav-text"> Онлайн-школа <br> "Знания" </p>
+    <a href="main.html" class="nav-link">Главная</a>
+    <a href="main.html#courses" class="nav-link">Курсы</a>
+    <a href="tutors.html" class="nav-link">Преподаватели</a>
+    <a href="notice.html" class="nav-link">Оставить заявку</a>
+    <a  href="comment.html" class="nav-link active">Оставить отзыв</a>
+    <a href="calculator.html" class="nav-link" >Калькулятор стоимости занятий</a>
+    <a href="about_us.html" class="nav-link">Контакты</a>
+    <p class = "nav-text_small"> При сотрудничестве с <a href = "https://www.hse.ru" class = "nav-link_small" target = "_blank"> Высшей школой экономики</a> 
+    </p>
+  </div>
+<!--
+правая навигация
+-->
+  <div class="little_nav">
+    <div class = "little_nav_div">
+      <a href="main.html" class="little_nav_link">
+        <img class="little_nav_pic" src="icons/home.svg" alt="Домой">
+      </a>
+    </div>
+    <div class = "little_nav_div">
+      <a href="#tops" class="little_nav_link">
+        <img class="little_nav_pic" src="icons/vector_up.svg" alt="Вверх">
+      </a>
+    </div>
+  </div>
+  <div class = "main">
+    <H1> Оставить отзыв </H1>
+      <form  action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_blank' class="form_comments">
+        <label class="form_label" for="comment">
+          Отзыв:
+        </label>
+        <p>
+        </p>
+        <textarea class = "commentsec" name="comments" id="comment">Оставьте отзыв о работе нашей онлайн-школы! Расскажите о своих впечатлениях и предложениях для развития.
+        </textarea>
+        <p> 
+        </p>
+        <label class="form_label" for="file-name"> 
+          Название файла (в формате Фамилия.txt)
+        </label> 
+        <input class="form_input" id="file-name" name="file_surname" size="50" type="text" value="Surname.txt">
+        <p>
+        </p>
+          <label class="form_label" for="type">
+            Как вы оцениваете работу нашей <br> онлайн-школы по 5-балльной шкале?
+          </label>
+          <select class="rating_input" id="type" name="rating">
+            <OPTION value="1">
+              1
+            </OPTION>
+            <OPTION value="2">
+              2
+            </OPTION>
+            <OPTION value="3">
+              3
+            </OPTION>
+            <OPTION value="4">
+              4
+            </OPTION>
+            <OPTION value="5">
+              5
+            </OPTION>
+          </select>
+      </p>
+      <p>
+      </p>
+       <p>
+        <input class="form_input"  name="Reset" type="Reset" value="Обновить">
+        <input class="form_input" name="submit" type="Submit" value="Отправить">
+      </p>
+      </form>
+  </div> 
+</body>
+</html>

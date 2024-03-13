@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <title> Main </title>
+</head>
+
+<body>
+<!--
+левая навигация
+--> 
+  <div class="sidenav nav-pills">
+    <a href = "main.html"> <img class = "nav-image" src = "images/books_apple.jpg" alt = "Книги"> </a>
+    <p class = "nav-text"> Онлайн-школа <br> "Знания" </p>
+    <a href="{% url 'main' %}" class="nav-link active">Главная</a>
+    <a href="#courses" class="nav-link">Курсы</a>
+    <a href="{% url 'tutors' %}" class="nav-link">Преподаватели</a>
+    <a href="notice.html" class="nav-link">Оставить заявку</a>
+    <a href="comment.html" class="nav-link">Оставить отзыв</a>
+    <a href="{% url 'index' %}"  class="nav-link" >Калькулятор стоимости занятий</a>
+    <a href="about_us.html" class="nav-link">Контакты</a>
+    <p class = "nav-text_small"> При сотрудничестве с <a href = "https://www.hse.ru" class = "nav-link_small" target = "_blank"> Высшей школой экономики</a> 
+    </p>
+  </div>
+<!--
+правая навигация
+-->
+  <div class="little_nav">
+    <div class="little_nav_div">
+      <a href="#top" class="little_nav_link"><img class="little_nav_pic" src="icons/vector_up.svg" alt="Вверх"></a>
+    </div>
+    <div class="little_nav_div">
+      <a href="#courses" class="little_nav_link"><img class="little_nav_pic" src="icons/one_circle.svg" alt="Раздел 1"></a>
+    </div>
+    <div class="little_nav_div">
+      <a href="#other_pages" class="little_nav_link"><img class="little_nav_pic" src="icons/two_circle.svg" alt="Раздел 2"></a>
+    </div>
+  </div>
+<!--
+вводная информация про школу
+-->
+
+<section class = "main" id = "top"> 
+    <h1> О нашей школе </h1>
+  <p> Наша школа существует уже 11 лет; за время своего существования она успела выпустить сотни довольных учеников, 
+    достигших своих целей. </p>
+  <p> Онлайн-школа – это сайт с обучающими материалами, который позволяет получать образование дистанционно через интернет. 
+    Это не просто набор курсов для развития практических компетенций по какой-то тематике, как это обычно бывает в электронных 
+    учебных заведениях для взрослых. Онлайн-школа для детей и подростков может быть полноценной альтернативой традиционному обучению:
+     образовательный процесс строится по государственной программе, а после окончания выдается аттестат установленного образца. Наша онлайн-школа поможет вам,
+     если вам нужны:
+    <ol>
+      <li> 
+        занятия с репетиторами по базовым предметам, чтобы улучшить оценки;
+      </li>
+      <li>
+        прохождение школьной программы без выдачи аттестата, 
+        чтобы не выпасть из обучения, если ребенок не посещает школу;
+      </li>
+      <li>
+        отдельные онлайн курсы, если ребенку нужно углубиться в 
+        конкретный предмет;
+      </li>
+      <li> 
+        занятия по подготовке к: 
+        <ul> 
+          <li> 
+            ЕГЭ, 
+          </li>
+          <li> 
+            ОГЭ, 
+          </li>
+          <li>
+            ВПР, 
+          </li>
+          <li> 
+             TOEFL,
+          </li>
+          <li> 
+            IELTS,
+         </li>
+          <li>
+            подготовка к олимпиадам, поступлению и обучению в ВУЗе.
+          </li>
+        </ul>
+      </li>
+    </ol>  
+    Поэтому если вы подберете хорошую онлайн школу, сможете закрыть вопрос и с основным, и с дополнительным образованием для ребенка. 
+  </p>
+  <p class = "important"> НАША ШКОЛА – ТО, ЧТО ВАМ НУЖНО! </p>
+</section>
+<!--
+курсы: тут будет таблица
+-->
+<section class = "main" id = "courses"> 
+  <h1> Предметы </h1>
+  <table class = "tabling">
+    <tr class = "heads">
+      <td> Предмет </td>
+      <td> Стоимость личного <br> занятия</td>
+      <td> Преподаватели </td>
+      <td> Иллюстрация </td>
+    </tr>
+    <tr>
+      <td> <a href = "https://ru.wikipedia.org/wiki/Математика"> Математика </a> </td>
+      <td> 1000 рублей </td>
+      <td> 
+        <ul>
+          <li> Викторова Анна </li>
+          <li> Сидоров Олег </li>
+        </ul>
+      </td>
+      <td> <img src = images/maths.jpg width = "250px" alt = "Математика">  
+      </td>
+    </tr>
+    <tr>
+      <td> <a href = "https://ru.wikipedia.org/wiki/Обществознание"> Обществознание </a> </td>
+      <td> 800 рублей </td>
+      <td> 
+        <ul>
+          <li> Семенова Ольга </li>
+          <li> Федотов Валентин </li>
+          <li> Семенова Татьяна </li>
+        </ul>
+      </td>
+      <td> <img src = "images/obsh.jpg" width = "250px" alt = "Обществознание">  
+      </td>
+    </tr>
+    <tr>
+      <td> <a href = "https://ru.wikipedia.org/wiki/Английский_язык"> Английский язык </a> </td>
+      <td> 1200 рублей </td>
+      <td> 
+        <ul>
+          <li> Антонова Елизавета </li>
+          <li> Морозов Сергей </li>
+        </ul>
+      </td>
+      <td> <img src = "images/english.jpg" width = "250px" alt = "Английский">  
+      </td>
+    </tr>
+  </table>
+
+</section>
+<!--
+ссылки на другие секции
+-->
+<section class = "main" id = "other_pages">
+  <h1> Другие разделы сайта </h1>
+  <div class = "buttons">
+    <div class = "card"> 
+      <p> Узнать больше о преподавателях </p>
+      <form>
+        <button class = "thebutton" type="submit" formaction="tutors.html">Нажмите!</button>
+      </form>
+    </div>
+    <div class = "card"> 
+      <p> Посчитать стоимость занятий</p>
+      <form>
+        <button class = "thebutton" type="submit" formaction="calculator.html">Нажмите!</button>
+      </form>
+    </div>
+    <div class = "card"> 
+      <p> Оставить отзыв о школе </p>
+      <form>
+        <button class = "thebutton" type="submit" formaction="comment.html">Нажмите!</button>
+      </form>
+    </div>
+    <div class = "card"> 
+      <p> Оставить заявку на занятия</p>
+      <form>
+        <button class = "thebutton" type="submit" formaction="notice.html">Нажмите!</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
